@@ -1,0 +1,14 @@
+{
+  "name": "desafio-webdesign-linx",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w dist/scss -o dist/css --output-style compressed"
+  },
+  "repository": "git@github.com:Matheus-Alpe/desafio-webdesign-linx.git",
+  "author": "Matheus Alves Pereira <matttalves@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "6.0.1"
+  }
+}
