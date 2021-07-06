@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w dist/scss -o dist/css --output-style compressed"
+    "start": "npm-run-all --parallel watch:sass watch:files",
+    "watch:sass": "node-sass -w dist/scss/index.scss -o dist/css --output-style compressed",
+    "watch:files": "browser-sync start --server --files 'dist/**/*.css, dist/**/*.html, dist/**/*.js, !node_modules/**/*'"
   },
   "repository": "git@github.com:Matheus-Alpe/desafio-webdesign-linx.git",
   "author": "Matheus Alves Pereira <matttalves@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "node-sass": "6.0.1"
+    "browser-sync": "^2.27.4",
+    "node-sass": "6.0.1",
+    "npm-run-all": "^4.1.5"
   }
 }
