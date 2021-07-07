@@ -8,22 +8,24 @@
     <title>Teste WebDesign 2021</title>
 </head>
 <body>
-    <header class="hero">
-        <h1>Tarefas a fazer</h1>
-        <h2>Adicione e complete tarefas para organizar melhor a sua semana. :)</h2>
+    <header class="hero-wrapper">
+        <div class="hero container">
+            <h1>Tarefas a fazer</h1>
+            <h2>Adicione e complete tarefas para organizar melhor a sua semana. :)</h2>
+        </div>
     </header>
 
-    <main class="content-wrapper">
-        <nav>
-            <form action="#" class="search-box">
+    <main class="content-wrapper container">
+        <nav class="nav">
+            <form action="#" class="nav__search-box">
                 <input type="text" placeholder="Busque tarefas">
                 <button class="button">Buscar</button>
             </form>
-            <div>
+            <div class="nav__order-by">
                 <label for="order-by">Organizar por:</label>
                 <select name="order-by" id="order-by">
-                    <option value="">Prazo</option>
-                    <option value="">Data de inclusão</option>
+                    <option value="prazo">Prazo</option>
+                    <option value="inclusao">Data de inclusão</option>
                 </select>
             </div>
         </nav>
@@ -33,7 +35,7 @@
 
                 <div class="task">
                     <figure class="task__img">
-                        <img src="#" alt="Task image">
+                        <img src="assets/default.png" alt="Task image">
                     </figure>
                     <div class="task__details">
                         <h3 class="task__name">Nome da tarefa</h3>
@@ -92,7 +94,7 @@
     </main>
 
     <footer class="footer">
-        <div>
+        <div class="container">
             <p>Testando suas habilidades em HTML e CSS.</p>
             <p>Linx Impulse 2021</p>
             <p>Teste ficcional!</p>

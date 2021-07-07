@@ -1,0 +1,18 @@
+@import '../globals/variables';
+
+.hero-wrapper {
+
+    &::before {
+        content: '';
+        background-color: $dark-purple;
+        min-height: 160px;
+        width: 100%;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    }
+
+    
+}

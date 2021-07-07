@@ -1,0 +1,13 @@
+@import '../globals/variables';
+
+.content-wrapper {
+    
+    .nav {
+        background-color: $yellow-orange;
+        padding: 30px 17px;
+    }
+
+    .newsletter {
+        background-color: $light-grey;
+    }
+}
