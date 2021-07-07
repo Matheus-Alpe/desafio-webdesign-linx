@@ -1,0 +1,115 @@
+@import 'variables';
+
+@mixin font-definition($color, $fs, $fw, $lh) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}
+
+::placeholder {
+    @include font-definition($grey, .75rem, 400, 1.021rem);
+}
+
+.hero {
+    text-align: center;
+
+    h1 {
+        @include font-definition(
+            $white, 
+            clamp(1.5rem, 5vw, 2.25rem),
+            800, 
+            2.533rem
+        );
+    }
+
+    h2 {
+        @include font-definition(
+            $dark-purple, 
+            clamp(1rem, 5vw, 1.532rem),
+            400, 
+            1.362rem
+        );
+    }
+}
+
+.content-wrapper {
+
+    .nav {
+        * {
+            font-size: .875rem;
+            font-weight: 400;
+        }
+
+        &__order-by {
+            label {
+                color: $white;
+                font-weight: 600;
+                line-height: 1.192rem;
+            }
+
+            select {
+                color: $dark-grey;
+            }
+        }
+        
+    }
+
+    .task {
+        &__name {
+            @include font-definition($dark-purple, .875rem, 700, 1.192rem); 
+        }
+
+        &__description {
+            @include font-definition(
+                $black, 
+                clamp(.688rem, 1vw, .75rem),
+                400, 
+                .936rem
+            );
+        }
+
+        &__deadline {
+            @include font-definition($black, .75rem, 700, 1.021rem);
+
+            span {
+                font-size: 1.125rem;
+                color: $red;
+                line-height: 1.532rem;
+            }
+        }
+
+        &__inclusion-date {
+            @include font-definition($dark-grey, .625rem, 400, .851rem);
+        }
+    }
+    
+    .newsletter {
+        h5 {
+            @include font-definition($light-purple, .875rem, 700, 1.192rem);
+        }
+
+        label {
+            @include font-definition($grey, .75rem, 400, 1.021rem);
+        }
+    }
+
+    .about {
+        text-align: center;
+
+        &__content {
+            @include font-definition(
+                $dark-grey, 
+                clamp(.75rem, 2.5vw, .875rem),
+                400, 
+                1.021rem
+            );
+            
+        }
+    }
+}
+
+.footer {
+    text-align: center;
+    @include font-definition($white, .75rem, 400, 1.021rem);
+}
