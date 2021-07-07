@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Teste WebDesign 2021</title>
+</head>
+<body>
+    <header class="hero">
+        <h1>Tarefas a fazer</h1>
+        <h2>Adicione e complete tarefas para organizar melhor a sua semana. :)</h2>
+    </header>
+
+    <main class="content-wrapper">
+        <nav>
+            <form action="#" class="search-box">
+                <input type="text" placeholder="Busque tarefas">
+                <button class="button">Buscar</button>
+            </form>
+            <div>
+                <label for="order-by">Organizar por:</label>
+                <select name="order-by" id="order-by">
+                    <option value="">Prazo</option>
+                    <option value="">Data de inclusão</option>
+                </select>
+            </div>
+        </nav>
+
+        <section class="content">
+            <div class="tasks">
+
+                <div class="task">
+                    <figure class="task__img">
+                        <img src="#" alt="Task image">
+                    </figure>
+                    <div class="task__details">
+                        <h3 class="task__name">Nome da tarefa</h3>
+                        <p class="task__description">Descrição da tarefa, o que deve ser feito e muitas informações que explicam melhor do que se trata.</p>
+                        <div class="task__info-date">
+                            <h4 class="task__deadline">Prazo: <span>00/00</span></h4>
+                            <span class="task__inclusion-date">Data de inclusão: há 2 semanas</span>
+                        </div>
+                        <div class="task__button-group">
+                            <button class="task__conclusion button">Concluir</button>
+                            <button class="task__change-deadline button">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.3051C14.5868 18.3051 18.3051 14.5868 18.3051 10C18.3051 5.41323 14.5868 1.69492 10 1.69492C5.41323 1.69492 1.69492 5.41323 1.69492 10C1.69492 14.5868 5.41323 18.3051 10 18.3051ZM10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="white"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.8983 4.82345H10.2542V10.4167H15V11.7726H8.8983V4.82345Z" fill="white"/>
+                                </svg>
+                                <span>Alterar prazo</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+            
+            <div>
+                <button class="button">VER MAIS +</button>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <form action="#" class="newsletter__form">
+                <h5>Quer receber dicas para organizar melhor a sua rotina? Cadastre-se!</h5>
+                <div>
+                    <label for="name">nome</label>
+                    <input type="text" name="name" id="name" placeholder="Digite seu nome">
+                </div>
+                <div>
+                    <label for="email">e-mail</label>
+                    <input type="text" name="email" id="email" placeholder="Digite seu e-mail">
+                </div>
+                <button class="button">Cadastrar</button>
+            </form>
+        </section>
+
+        <section class="about">
+            <figure class="about__img">
+                <img src="#" alt="Logo Linx">
+            </figure>
+            <div class="about__content">
+                <p>A Linx é uma empresa brasileira especialista em tecnologia para o varejo. Líder no mercado de software de gestão, com 45,6% de market share do mercado varejista, conforme atesta o IDC.</p>
+
+                <p>Toda a expertise da Linx na jornada de compra é transformada em insights fundamentais para atingir o que os varejistas mais esperam: fidelizar seus consumidores e atingir resultados concretos e relevantes.</p>
+
+                <p>Com capital aberto na B3 desde 2013, a Linx também se tornou a primeira empresa brasileira de software com capital aberto na NYSE, em 2019. A empresa possui mais de 3,5 mil colaboradores distribuídos entre sua sede em São Paulo, 15 filiais pelo Brasil e 5 países da América. Para saber mais, acesse linx.com.br/imprensa.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <p>Testando suas habilidades em HTML e CSS. </p>
+            <p>Linx Impulse 2021</p>
+            <p>Teste ficcional!</p>
+        </div>
+    </footer>
+</body>
+</html>
