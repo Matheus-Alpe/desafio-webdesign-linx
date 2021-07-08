@@ -1,0 +1,31 @@
+@import '../globals/variables';
+
+input, select {
+    border: none;
+    background: $white;
+    border-radius: 8px;
+    padding: 9px 15px;
+}
+
+.nav__custom-select {
+    max-width: fit-content;
+
+    &:focus-within {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+
+    select {
+        width: 193px;
+        appearance: none;
+        padding-right: 30px;
+    }
+
+    svg {
+        transition: transform .5s;
+        position: absolute;
+        right: 12px;
+        top: 14px;
+    }
+}

@@ -1,0 +1,36 @@
+@import '../globals/variables';
+
+.task {
+    display: flex;
+    align-items: center;
+    border: 1px solid $black;
+    overflow: hidden;
+    border-radius: 14px;
+    padding: 5% 3%;
+    gap: 10px;
+
+    &__img {
+        min-width: 100px;
+        width: 100vw;
+        max-width: 147px;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &__details {
+
+        p {
+            max-width: 95%;
+            margin: 5px 0;
+        }
+    }
+
+    svg {
+        position: absolute;
+        top: 14px;
+        right: 16px;
+    }
+}

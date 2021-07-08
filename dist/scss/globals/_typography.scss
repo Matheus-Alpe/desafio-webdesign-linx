@@ -11,6 +11,25 @@
     @include font-definition($grey, .75rem, 400, 1.021rem);
 }
 
+.badge {
+    @include font-definition($white, .75rem, 700, 1.021rem); 
+}
+
+.button {
+    font-weight: 700;
+    line-height: 1.192rem;
+
+
+    &.button--big {
+        line-height: 1.362rem;
+        font-size: 1rem;
+    }
+}
+
+.due-date__conclude {
+    color: $dark-purple;
+}
+
 .hero {
     text-align: center;
 
@@ -40,7 +59,7 @@
 .content-wrapper {
 
     .nav {
-        * {
+        *:not(button) {
             font-size: .875rem;
             font-weight: 400;
         }
@@ -60,11 +79,12 @@
     }
 
     .task {
-        &__name {
+
+        h3 {
             @include font-definition($dark-purple, .875rem, 700, 1.192rem); 
         }
 
-        &__description {
+        p {
             @include font-definition(
                 $black, 
                 clamp(.688rem, 1vw, .75rem),
@@ -73,18 +93,20 @@
             );
         }
 
-        &__deadline {
-            @include font-definition($black, .75rem, 700, 1.021rem);
+        .due-date {
+            h4 {
+                @include font-definition($black, .75rem, 700, 1.021rem);
+            }
 
-            span {
+            &__deadline {
                 font-size: 1.125rem;
                 color: $red;
                 line-height: 1.532rem;
             }
-        }
 
-        &__inclusion-date {
-            @include font-definition($dark-grey, .625rem, 400, .851rem);
+            &__inclusion-date {
+                @include font-definition($dark-grey, .625rem, 400, .851rem);
+            }
         }
     }
     

@@ -1,0 +1,16 @@
+@import '../globals/variables';
+
+.badge {
+    position: absolute;
+    top: 25px;
+    left: -5px;
+    background-color: $dark-purple;
+    padding: 5px 12px 5px 17px;
+    border-radius: 0 8px 8px 0;
+    z-index: 20;
+
+    &.badge--warning {
+        background-color: $red;
+    }
+}
+

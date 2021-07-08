@@ -3,13 +3,47 @@
 .content-wrapper {
     
     .nav {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 20px;
         background-color: $yellow-orange;
         border-radius: 8px;
         padding: 30px 17px;
+
+        &__search-box {
+
+            input {
+                min-width: 100%;
+                padding-right: 70px;
+            }
+
+            .button {
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                padding: 0 10px;
+            }
+        }
+
+        &__order-by {
+            // max-width: 310px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 
     .content {
         margin: 2em 0;
+
+        .tasks {
+
+        }
+
+        .load {
+            margin: 3em 0;
+        }
     }
 
     .newsletter {
@@ -29,7 +63,7 @@
         
         &__img {
             margin-bottom: 40px;
-
+            
             img {
                 max-width: 157px;
             }

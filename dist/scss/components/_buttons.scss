@@ -1,0 +1,29 @@
+@import '../globals/variables';
+
+button {
+    background-color: $light-purple;
+    color: $white;
+    border: none;
+    border-radius: 8px;
+    display: block;
+}
+
+.due-date__conclude {
+    background: none;
+    border: 1px solid $dark-purple;
+    padding: 5px 0;
+    margin: 10px 0 5px;
+    width: 100%;
+    transition: background 0.5s;
+
+    &.active {
+        background: $dark-purple;
+        color: $white;
+    }
+}
+
+.load__button {
+    margin: 0 auto;
+    padding: 5px 0;
+    width: calc(10vw + 100px);
+}
