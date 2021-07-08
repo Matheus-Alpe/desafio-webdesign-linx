@@ -25,7 +25,7 @@
         max-height: 381px;
 
         @media (min-width: $medium) {
-            grid-gap: 28px;
+            gap: 28px;
             justify-items: center;
             align-content: center;
         }

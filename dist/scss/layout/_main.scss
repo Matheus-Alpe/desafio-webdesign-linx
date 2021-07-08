@@ -1,16 +1,43 @@
 @import '../globals/variables';
 
+@media (min-width: $medium) {
+    .content-wrapper {
+        .about {
+            display: flex;
+    
+            &__img {
+                width: 30%;           
+                margin-right: 2em;
+    
+                .logo {
+                    width: 100%;
+                }
+            }
+            
+    
+            &__content {
+                text-align: justify;
+            }
+        }
+    }
+    
+}
+
 .content-wrapper {
     
     .nav {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
         background-color: $yellow-orange;
         border-radius: 8px;
+        margin: 4em 0;
         padding: 30px 17px;
 
         &__search-box {
+            flex: 1;
+            max-width: 360px;
 
             input {
                 min-width: 100%;
@@ -27,7 +54,8 @@
         }
 
         &__order-by {
-            // max-width: 310px;
+            flex: 1;
+            max-width: 320px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -38,8 +66,16 @@
         margin: 2em 0;
 
         .tasks {
+            display: grid;
+            gap: 24px;
 
+            @media (min-width: $x-small) {
+                grid-template-columns: repeat(auto-fill, 250px);
+                grid-auto-rows: 360px;
+            }
         }
+        
+        
 
         .load {
             margin: 3em 0;
@@ -49,12 +85,38 @@
     .newsletter {
         display: none;
         background-color: $light-grey;
-        padding: 21px 0;
+        margin: 0 auto;
+        max-width: 90%;
+        padding: 21px 45px;
         border-radius: 8px;
 
         // temp
         @media (min-width: 600px) {
             display: block;
+        }
+
+        &__inputs {
+            margin-top: 7px;
+            display: flex;
+            gap: 15px;
+
+            & > div {
+                flex: 3;
+
+                label {
+                    display: block;
+                    margin-bottom: 2px;
+                }
+                
+                input {
+                    width: 100%;
+                }
+            }
+            
+            .button--big {
+                flex: 1;
+                margin-bottom: 0;
+            }
         }
     }
     
@@ -63,10 +125,6 @@
         
         &__img {
             margin-bottom: 40px;
-            
-            img {
-                max-width: 157px;
-            }
         }
 
         &__content {
@@ -78,4 +136,8 @@
             }
         }
     }
+}
+
+.logo {
+    width: 65%;
 }
