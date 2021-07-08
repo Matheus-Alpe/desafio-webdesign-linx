@@ -26,10 +26,14 @@
     h2 {
         @include font-definition(
             $dark-purple, 
-            clamp(1rem, 5vw, 1.532rem),
+            clamp(1rem, 2.5vw, 1.532rem),
             400, 
             1.362rem
         );
+
+        @media (min-width: $medium) {
+            color: $white;
+        }
     }
 }
 

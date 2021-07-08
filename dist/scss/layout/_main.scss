@@ -4,10 +4,44 @@
     
     .nav {
         background-color: $yellow-orange;
+        border-radius: 8px;
         padding: 30px 17px;
     }
 
+    .content {
+        margin: 2em 0;
+    }
+
     .newsletter {
+        display: none;
         background-color: $light-grey;
+        padding: 21px 0;
+        border-radius: 8px;
+
+        // temp
+        @media (min-width: 600px) {
+            display: block;
+        }
+    }
+    
+    .about {
+        margin: 4em 0;
+        
+        &__img {
+            margin-bottom: 40px;
+
+            img {
+                max-width: 157px;
+            }
+        }
+
+        &__content {
+            margin: 0 auto;
+            width: 90%;
+
+            p:nth-child(even) {
+                margin: 1.5em 0;
+            }
+        }
     }
 }
