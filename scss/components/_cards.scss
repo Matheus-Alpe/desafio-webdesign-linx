@@ -6,11 +6,15 @@
 
         &:focus-within .task,
         &:hover .task {
-            box-shadow: 0 0 0 1px rgba(#000, .05), 0 20px 50px 0 rgba(#000, .1);
+            box-shadow: 1px 5px 22px 0px rgba(0,0,0,0.3), 0px 21px 50px -6px rgba(0,0,0,0.2);
             transform: translateY(-10px);
             position: absolute;
             height: 125%;
             z-index: 7;
+
+            .group-button {
+                height: min-content;
+            }
         }
     
         
@@ -29,19 +33,26 @@
 }
 
 .task__container {
-    // height: 100%;
-
+    
+    @media (max-width: $x-small) {
+        &.mobile-hide {
+            display: none;
+        }
+    }
    
     & > svg {
         position: absolute;
         top: 14px;
         right: 16px;
+        z-index: 2;
+        cursor: pointer;
     }
 
     .group-button {
         transform: translateY(160%);
         position: absolute;
         overflow: hidden;
+        height: 0;
         left: 0;
         right: 0;
 
@@ -61,9 +72,8 @@
         grid-template-columns: 1fr minmax(150px, 1fr);
         align-items: center;
         border: 1px solid $black;
-        overflow: hidden;
         border-radius: 14px;
-        transition: all .1s;
+        transition: all .2s;
         gap: 10px;
 
         @media (min-width: $x-small) {

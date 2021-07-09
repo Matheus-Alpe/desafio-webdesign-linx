@@ -44,13 +44,18 @@
     h2 {
         @include font-definition(
             $dark-purple, 
-            clamp(1rem, 2.5vw, 1.532rem),
+            clamp(1rem, 2.5vw, 1.125rem),
             400, 
             1.362rem
         );
 
         @media (min-width: $medium) {
-            color: $white;
+            @include font-definition(
+                $white, 
+                clamp(1rem, 2.5vw, 1.125rem),
+                400, 
+                1.532rem
+            );
         }
     }
 }
@@ -105,6 +110,11 @@
 
             &__inclusion-date {
                 @include font-definition($dark-grey, .625rem, 400, .851rem);
+
+                &.warning {
+                    margin-left: 13px;
+                    color: $red;
+                }
             }
         }
     }

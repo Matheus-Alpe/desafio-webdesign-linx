@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "start": "npm-run-all --parallel watch:sass watch:files",
-    "watch:sass": "node-sass -w dist/**/*.scss -o dist/css --output-style compressed",
-    "watch:files": "browser-sync start --server --files 'dist/**/*.css, dist/**/*.html, dist/**/*.js, !node_modules/**/*'"
+    "watch:sass": "node-sass -w scss/*.scss -o dist/css --output-style compressed",
+    "watch:files": "browser-sync start --server --files 'dist/**/*.css, dist/**/*.html, dist/**/*.js, !node_modules/**/*' --directory --port 6969"
   },
   "repository": "git@github.com:Matheus-Alpe/desafio-webdesign-linx.git",
   "author": "Matheus Alves Pereira <matttalves@gmail.com>",
