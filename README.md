@@ -1,5 +1,5 @@
 
-# Desafio Web Design Linx
+# Challenge Web Design Linx
 
 
 - [About](#about)
